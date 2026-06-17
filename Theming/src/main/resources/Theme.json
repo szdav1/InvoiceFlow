@@ -1,0 +1,116 @@
+{
+    "Window": {
+        "background": {
+            "stationary": ["#FF0000", "#00FF00", "#0000FF"],
+            "hovered":    ["#0000FF", "#00FF00", "#FF0000"],
+            "clicked":    ["#FF0000", "#00FF00", "#0000FF"]
+        },
+
+        "foreground": {
+            "stationary": ["#FF0000", "#0000FF", "#0000FF"],
+            "hovered":    ["#0000FF", "#0000FF", "#FF0000"],
+            "clicked":    ["#FF0000", "#0000FF", "#0000FF"]
+        },
+
+        "border": {
+            "stationary": {
+                "colors": ["#FF0000", "#0000FF", "#0000FF"],
+                "size": 12,
+                "radius": 48
+            },
+            "hovered": {
+                "colors": ["#0000FF", "#0000FF", "#FF0000"],
+                "size": 8,
+                "radius": 44
+            },
+            "clicked": {
+                "colors": ["#FF0000", "#0000FF", "#0000FF"],
+                "size": 44,
+                "radius": 40
+            }
+        },
+
+        "icon": {
+            "stationary": {
+                "src": "icons/Stationary.png",
+                "width": 12,
+                "height": 12
+            },
+            "hovered": {
+                "src": "icons/Hovered.png",
+                "width": 8
+            },
+            "clicked": {
+                "src": "icons/Clicked.png",
+                "height": 4
+            }
+        }
+
+    },
+
+    "MainPanel": {
+        "background": {
+            "stationary": ["#FF0000", "#00FF00", "#0000FF"],
+            "hovered":    ["#0000FF", "#00FF00", "#FF0000"],
+            "clicked":    ["#FF0000", "#00FF00", "#0000FF"]
+        },
+
+        "foreground": {
+            "stationary": ["#FF0000", "#0000FF", "#0000FF"],
+            "hovered":    ["#0000FF", "#0000FF", "#FF0000"],
+            "clicked":    ["#FF0000", "#0000FF", "#0000FF"]
+        },
+
+        "border": {
+            "stationary": {
+                "colors": ["#FF0000", "#0000FF", "#0000FF"],
+                "size": 12,
+                "radius": 48
+            },
+            "hovered": {
+                "colors": ["#0000FF", "#0000FF", "#FF0000"],
+                "size": 8,
+                "radius": 44
+            },
+            "clicked": {
+                "colors": ["#FF0000", "#0000FF", "#0000FF"],
+                "size": 44,
+                "radius": 40
+            }
+        },
+
+        "icon": {
+            "stationary": {
+                "src": "icons/Stationary.png",
+                "width": 12,
+                "height": 12
+            },
+            "hovered": {
+                "src": "icons/Hovered.png",
+                "width": 8
+            },
+            "clicked": {
+                "src": "icons/Clicked.png",
+                "height": 4
+            }
+        },
+
+        "font": {
+            "stationary": {
+                "family": "Cascadia Code",
+                "ligature": "Plain",
+                "size": 12
+            },
+            "hovered": {
+                "family": "Fira Code",
+                "ligature": "Bold",
+                "size": 8
+            },
+            "clicked": {
+                "family": "Monospaced",
+                "ligature": "Italic",
+                "size": 4
+            }
+        }
+    }
+}

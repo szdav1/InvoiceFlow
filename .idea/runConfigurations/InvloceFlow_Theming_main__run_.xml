@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="InvloceFlow.Theming:main [run]" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="com.sdp.invoiceflow.theming.Theming" />
+    <module name="InvoiceFlow.Theming.main" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
