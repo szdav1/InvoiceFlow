@@ -1,12 +1,14 @@
 package com.sdp.invoiceflow.theming;
 
+import com.sdp.invoiceflow.theming.cache.StyleCache;
+import com.sdp.invoiceflow.theming.cache.elements.*;
 import com.sdp.invoiceflow.theming.json.JsonStyle;
 import com.sdp.invoiceflow.theming.json.parser.JsonParser;
 import com.sdp.invoiceflow.theming.style.elements.*;
 
+import java.awt.geom.Point2D;
 import java.util.Map;
 
-// TODO: Cache system
 @SuppressWarnings("all")
 public class Theming {
     public static void main(String[] args) throws Exception {
@@ -24,5 +26,18 @@ public class Theming {
 
         Styles.loadStyle(Theming.class.getResource("/Theme.json").getFile());
         System.out.println(Styles.get("mainpanel"));
+
+        final int WIDTH = 1920;
+        final int HEIGHT = 1080;
+
+        StyleCache cache = StyleCache.builder()
+            .background(new BackgroundStyleElementCache(new Point2D.Float(0, 0), new Point2D.Float(200, 200), bg))
+            .foreground(new ForegroundStyleElementCache(new Point2D.Float(0, 0), new Point2D.Float(200, 200), fg))
+            .border(new BorderStyleElementCache(new Point2D.Float(0, 0), new Point2D.Float(200, 200), br))
+            .icon(new IconStyleElementCache(WIDTH, in))
+            .font(new FontStyleElementCache(WIDTH, ft))
+            .build();
+
+        System.out.println(cache);
     }
 }

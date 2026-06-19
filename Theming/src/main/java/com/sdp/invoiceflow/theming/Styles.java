@@ -19,7 +19,7 @@ public final class Styles {
 
         try {
             JsonParser.parseJson(filePath).forEach((styleName, jsonStyle) ->
-                styles.put(styleName.toLowerCase(), StyleConverter.convertFromJsonStyle(jsonStyle)));
+                styles.put(styleName.toLowerCase(), StyleConverter.fromJsonStyle(jsonStyle)));
         }
         catch (Exception e) {
             e.printStackTrace(); // TODO: Load backup styles

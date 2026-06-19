@@ -10,11 +10,11 @@ import java.awt.*;
 public abstract class PaintStyle {
     @Data
     @AllArgsConstructor
-    public static final class ColorStyleAttribute implements PaintStyleAttribute {
+    public static final class PaintStyleAttribute implements PaintStyleUtility {
         private Color[] colors;
         private float[] fractions;
 
-        public ColorStyleAttribute(final String... colorStrs) {
+        public PaintStyleAttribute(final String... colorStrs) {
             if (colorStrs == null) {
                 this.colors = new Color[] { Color.black, Color.black };
                 this.fractions = new float[] { 0.0F, 1.0F };
@@ -28,32 +28,32 @@ public abstract class PaintStyle {
             this.calculateEqualFractions(this.fractions, this.colors);
         }
 
-        public ColorStyleAttribute() {
+        public PaintStyleAttribute() {
             this.colors = new Color[] { Color.black, Color.black };
             this.fractions = new float[] { 0.0F, 1.0F };
         }
     }
 
-    private ColorStyleAttribute stationary;
-    private ColorStyleAttribute hovered;
-    private ColorStyleAttribute clicked;
+    private PaintStyleAttribute stationary;
+    private PaintStyleAttribute hovered;
+    private PaintStyleAttribute clicked;
 
     public PaintStyle() {
-        this.stationary = new ColorStyleAttribute();
-        this.hovered = new ColorStyleAttribute();
-        this.clicked = new ColorStyleAttribute();
+        this.stationary = new PaintStyleAttribute();
+        this.hovered = new PaintStyleAttribute();
+        this.clicked = new PaintStyleAttribute();
     }
 
     public PaintStyle(final JsonPaintElement jsonPaintElement) {
         if (jsonPaintElement == null) {
-            this.stationary = new ColorStyleAttribute();
-            this.hovered = new ColorStyleAttribute();
-            this.clicked = new ColorStyleAttribute();
+            this.stationary = new PaintStyleAttribute();
+            this.hovered = new PaintStyleAttribute();
+            this.clicked = new PaintStyleAttribute();
             return;
         }
 
-        this.stationary = new ColorStyleAttribute(jsonPaintElement.getStationary());
-        this.hovered = new ColorStyleAttribute(jsonPaintElement.getHovered());
-        this.clicked = new ColorStyleAttribute(jsonPaintElement.getClicked());
+        this.stationary = new PaintStyleAttribute(jsonPaintElement.getStationary());
+        this.hovered = new PaintStyleAttribute(jsonPaintElement.getHovered());
+        this.clicked = new PaintStyleAttribute(jsonPaintElement.getClicked());
     }
 }

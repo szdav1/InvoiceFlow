@@ -7,7 +7,7 @@ import lombok.experimental.UtilityClass;
 
 @UtilityClass
 public final class StyleConverter {
-    public static Style convertFromJsonStyle(final JsonStyle jsonStyle) {
+    public static Style fromJsonStyle(final JsonStyle jsonStyle) {
         return Style.builder()
             .background(new BackgroundStyleElement(jsonStyle.getBackground()))
             .foreground(new ForegroundStyleElement(jsonStyle.getForeground()))

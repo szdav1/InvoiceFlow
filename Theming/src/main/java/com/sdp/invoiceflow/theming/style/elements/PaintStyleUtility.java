@@ -2,7 +2,7 @@ package com.sdp.invoiceflow.theming.style.elements;
 
 import java.awt.*;
 
-public interface PaintStyleAttribute {
+public interface PaintStyleUtility {
     default void parseColors(final Color[] dest, final String[] colorStrs) {
         for (int i = 0; i < colorStrs.length; i++) {
             if (colorStrs[i].isBlank() || colorStrs[i].length() < 6) {

@@ -10,7 +10,7 @@ import java.awt.*;
 public final class BorderStyleElement {
     @Data
     @AllArgsConstructor
-    public static final class BorderStyleAttribute implements PaintStyleAttribute {
+    public static final class BorderStyleAttribute implements PaintStyleUtility {
         private Color[] colors;
         private float[] fractions;
         private int size;
